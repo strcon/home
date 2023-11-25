@@ -49,5 +49,4 @@ sudo chown alex /sys/class/graphics/fbcon/cursor_blink
 echo 0 > /sys/class/graphics/fbcon/cursor_blink
 
 clear
-echo "\n"
 ls
