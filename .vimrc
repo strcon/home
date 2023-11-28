@@ -1,23 +1,23 @@
 syntax on
-colorscheme industry
+if $TERM == 'alacritty'
+	colorscheme default
+else
+	colorscheme industry
 
-hi CursorLine ctermfg=magenta cterm=NONE
-hi Error ctermfg=white ctermbg=red cterm=bold
-hi ErrorMsg ctermfg=white ctermbg=red cterm=bold
-hi Special ctermfg=white cterm=bold
-hi MatchParen ctermfg=black ctermbg=white cterm=NONE
-hi EndOfBuffer ctermfg=black ctermbg=black
-hi StatusLine ctermfg=magenta ctermbg=black cterm=bold
-hi StatusLineNC ctermfg=white ctermbg=black cterm=bold
-hi VertSplit ctermfg=white ctermbg=black cterm=NONE
+	hi CursorLine ctermfg=magenta cterm=NONE
+	hi Error ctermfg=white ctermbg=red cterm=bold
+	hi ErrorMsg ctermfg=white ctermbg=red cterm=bold
+	hi Special ctermfg=white cterm=bold
+	hi MatchParen ctermfg=black ctermbg=white cterm=NONE
+	hi EndOfBuffer ctermfg=black ctermbg=black
+	hi StatusLine ctermfg=magenta ctermbg=black cterm=bold
+	hi StatusLineNC ctermfg=white ctermbg=black cterm=bold
+	hi VertSplit ctermfg=white ctermbg=black cterm=NONE
+endif
 
 set nu rnu
 set cursorline
 set ea
-
-set ts=2
-set sts=2
-set sw=2
 
 set laststatus=2
 set statusline=%t\ %m\ %r\ [%l/%L]\ %c\ %=%{%getcwd()%}
